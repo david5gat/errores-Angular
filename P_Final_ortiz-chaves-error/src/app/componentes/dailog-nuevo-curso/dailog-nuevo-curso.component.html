@@ -1,0 +1,42 @@
+
+
+<form [formGroup]="formNuevoCurso"  (ngSubmit)="enviarFormulario()">
+  <mat-form-field>
+    <mat-label>Nombre Profesor</mat-label>
+    <input matInput >
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Apellido Profesor</mat-label>
+    <input matInput >
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Curso</mat-label>
+    <mat-select>
+      <mat-option *ngFor="let curso of Cursos" value="Curso">{{curso.curso}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>comision</mat-label>
+      <input matInput >
+    </mat-form-field>
+
+
+    <mat-form-field>
+      <mat-label>alumnos</mat-label>
+      <input matInput >
+    </mat-form-field>
+
+
+    <mat-form-field>
+      <mat-label>estado</mat-label>
+      <input matInput >
+    </mat-form-field>
+
+    <div class="form-element">
+      <button mat-raised-button color="primary" [type]="submit" (click)="enviarFormulario()" >Submit Form</button>
+    </div>
+
+</form>
